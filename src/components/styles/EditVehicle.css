@@ -1,0 +1,49 @@
+.edit-vehicle-form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .edit-vehicle-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .edit-vehicle-form label input, 
+  .edit-vehicle-form label select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 6px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .edit-vehicle-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .edit-vehicle-form button:hover {
+    background-color: #45a049;
+  }
+  
+  .dark-mode .edit-vehicle-form {
+    background-color: #092d8f;
+    color: white;
+  }
+
+  .dark-mode .edit-vehicle-form label input,
+  .dark-mode .edit-vehicle-form label select {
+    background-color: #ad5b0e;
+    color:white;
+  }

@@ -1,0 +1,40 @@
+.parking-container {
+    display: flex;
+    max-width: 500px;
+    justify-content: center;
+    align-items: center;
+    background-color: #1ec5d1; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 15px auto;
+    }
+  
+  .parking-map {
+    height: 450px;
+    width: 100%; 
+    object-fit: cover;
+    border: 5px solid #1445cc;
+    border-radius: 8px;
+  }
+
+  .dark-mode .parking-container {
+    display: flex;
+    max-width: 500px;
+    justify-content: center;
+    align-items: center;
+    background-color: #092d8f; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 15px auto;
+    }
+  
+    .dark-mode .parking-map {
+      height: 450px;
+      width: 100%; 
+      object-fit: cover;
+      border: 5px solid #ad5b0e;
+      border-radius: 8px;
+    }
+  

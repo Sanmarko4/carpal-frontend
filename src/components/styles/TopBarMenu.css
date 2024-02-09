@@ -1,0 +1,144 @@
+.TopBarMenu {
+  position: fixed; /* Fix the position relative to the viewport */
+  top: 0; /* Align the top edge of the menu with the top of the viewport */
+  left: 0; /* Align the left edge of the menu with the left of the viewport */
+  width: 100%; /* Ensure the menu stretches across the full viewport width */
+  z-index: 1000; /* Set a high z-index to keep the menu on top of other content */
+  font-family: 'Arial', sans-serif;
+  background-color: #dffeff;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+body {
+  padding-top: 190px; /* Adjust this value based on the actual height of your TopBarMenu */
+}
+
+/* Style for the top row */
+.TopBarMenu .top-row {
+  background-color: #0a85be; /* Darker background for the top row */
+  padding: 5px 30px; /* Adjust the padding as needed */
+  font-size: 1em;
+  border-radius: 10px; /* Rounded corners */
+  display: flex; /* Use flexbox to align items */
+  justify-content: space-between; /* Space out the logo, welcome text, and links */
+  align-items: center; /* Center items vertically */
+  margin: 8px;
+}
+.TopBarMenu .top-row-links button {
+  color: white; /* Text color */
+  background-color: #15178a; /* Button background color */
+  padding: 10px 20px; /* Padding inside the buttons */
+  margin-top: 10px; /* Space out the buttons */
+  margin-left: 10px; /* Space out the buttons */
+  text-decoration: none; /* Remove underline from links */
+  border-radius: 5px; /* Rounded corners for buttons */
+  width: 180px;
+  transition: font-size 0.3s ease, font-weight 0.3s ease; /* Smooth transition for font-size and weight */
+}
+
+.TopBarMenu .top-row-links .vehicles-btn {
+  background-color: #1445cc;
+}
+.TopBarMenu .top-row-links .drivers-btn {
+  background-color: #d47114;
+}
+
+.TopBarMenu .top-row-links button:hover {
+  font-size: 1.1em; /* Increase font size */
+  font-weight: bold; /* Make font bold */
+  transform: scale(1.1); /* Adjust the scale factor to your preference */
+  background-color: #000000; /* Slightly lighter background on hover */
+  color: white; /* Text color */
+}
+
+.TopBarMenu .bottom-row {
+  color: white; /* Text color */
+  background-color: #1535c4; /* Button background color */
+  padding: 10px;
+  text-decoration: none; /* Remove underline from links */
+  border-radius: 10px; /* Rounded corners */
+  transition: all 0.3s ease; /* Smooth transition for all changes */
+  margin: 8px; 
+}
+
+.TopBarMenu .bottom-row a:hover {
+  font-size: 1.3em; /* Increase font size */
+  font-weight: bold; /* Make font bold */
+  background-color: #555; /* Slightly lighter background on hover */
+}
+
+.TopBarMenu nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.TopBarMenu nav ul li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.TopBarMenu nav ul li:hover {
+  font-size: 1.3em; /* Increase font size */
+  background-color: #091d8f;
+  border-radius: 5px;
+}
+
+/* Active link style */
+.TopBarMenu nav ul li.active {
+  background-color: #1025a0;
+}
+
+.TopBarMenu .top-row img {
+  height: auto;
+  width: 100%;       /* Make the image responsive */
+  max-width: 100px;  /* Maximum width */
+  border-radius: 20px; /* Rounded corners */
+}
+
+/* Responsive image size adjustment with a media query */
+@media (max-width: 768px) {
+  .TopBarMenu .top-row img {
+    max-width: 80px; /* Smaller logo on narrower viewports */
+  }
+}
+
+.dark-mode .TopBarMenu {
+  background-color: #333; /* Dark background for dark mode */
+  color: #fff; /* Light text for dark mode */
+}
+.dark-mode .TopBarMenu .top-row {
+  background-color: #1f1f1f; /* Darker background for the top row in dark mode */
+  margin: 8px;
+}
+.dark-mode .TopBarMenu .top-row-links button {
+  background-color: #444; /* Dark button background color for dark mode */
+  color: #fff; /* Light text color for buttons in dark mode */
+}
+.dark-mode .TopBarMenu .top-row-links .vehicles-btn {
+  background-color: #092d8f /* Adjusted color for Vehicles button in dark mode */
+}
+
+.dark-mode .TopBarMenu .top-row-links .drivers-btn {
+  background-color: #ad5b0e; /* Adjusted color for Drivers button in dark mode */
+}
+
+.dark-mode .TopBarMenu .top-row-links button:hover {
+  background-color: #5c5c5c; /* Lighter background on hover in dark mode */
+}
+
+.dark-mode .TopBarMenu .bottom-row {
+  background-color: #000000; /* Dark background color for the bottom row in dark mode */
+  margin: 8px;
+}
+
+.dark-mode .TopBarMenu .bottom-row a:hover {
+  background-color: #252525; /* Adjusted hover background color in dark mode */
+}
+
+.dark-mode .TopBarMenu nav ul li:hover {
+  background-color: #353535; /* Adjusted hover background color for list items in dark mode */
+}

@@ -1,0 +1,212 @@
+.VehiclesList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Creates 2 columns when width allows, and makes the items responsive */
+  gap: 40px; /* This adds space between the grid items */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.no-vehicles-message {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.Vehicle {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  display: flex;
+  flex-direction: row; /* Stack the child elements vertically */
+  align-items: center; /* Align items to the start of the flex container */
+  justify-content: space-between;
+  background: #f5f5f5;
+  border-radius: 8px;
+  transition: transform 0.5s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Keeps everything contained within the border-radius */
+}
+
+.Vehicle h1 {
+  font-size: 1.5em;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+.Vehicle h2 {
+  font-size: 0.85em;
+  color: #0a85be;
+  margin-top: 25px;
+  margin-bottom: 0px;
+}
+
+.Vehicle h3 {
+  font-size: 0.9em;
+  color: #666;
+  margin: 5px 0;
+}
+
+.Vehicle h4 {
+  font-size: 0.8em;
+  color: #000000;
+  margin: 3px 0;
+}
+
+.vehicle-image {
+  max-width: 100%; /* Allows image to be responsive within its flex item container */
+  flex-basis: 50%; /* Starts off taking half the space */
+  object-fit: cover; /* Adjust as needed to maintain aspect ratio */
+}
+
+.vehicle-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+  .Vehicle {
+    flex-basis: calc(50% - 20px);/* Stack image and details on smaller screens */
+  }
+}
+@media (max-width: 480px) {
+  .Vehicle {
+    flex-basis: 100%; /* Each vehicle takes full width on very small screens */
+  }
+}
+
+.vehicle-image {
+  width: 100%; /* Full width of the container */
+  object-fit: cover;
+  height: auto; /* Maintain aspect ratio */
+  max-height: 200px; /* Adjust maximum height as needed */
+  border-radius: 8px; /* Rounded corners for the images */
+  margin-bottom: 15px; /* Space between the image and the text below */
+  flex-basis: 50%; /* Starts off taking half the space */
+}
+
+.Vehicle:hover {
+  transform: scale(1.1); /* Adjust the scale factor to your preference */
+}
+
+.vehicle-actions {
+  margin-top: 10px;
+}
+
+.vehicle-actions button {
+  transition: transform 0.5s ease;
+  width: 100px;
+  margin-right: 10px;
+  margin-top: 5px;
+  padding: 5px 10px;
+  background-color: #4CAF50; /* Green background for buttons */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.vehicle-actions button:hover {
+  font-size: 1.1em; /* Increase font size */
+  font-weight: bold; /* Make font bold */
+  transform: scale(1.1); /* Adjust the scale factor to your preference */
+  background-color: #000000; /* Slightly lighter background on hover */
+  color: white;
+}
+
+.vehicle-actions .edit-btn {
+  background-color: #1445cc;
+}
+.vehicle-actions .remove-btn {
+  background-color: #d47114;
+}
+.vehicle-actions .detach-btn {
+  background-color: #e62828;
+}
+
+.vehicle-details .dates {
+  display: inline-block;
+  margin-left: 5px;
+  color: rgb(0, 0, 0);
+}
+
+.vehicle-details .dates {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.vehicle-details .dates.red {
+  color: white;
+  font-size: 1.1em;
+  background-color: #FF0000;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.vehicle-details .dates.orange {
+  color: white;
+  font-size: 0.9em;
+  background-color: #FFA500;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.vehicle-details .dates.green {
+  color: white;
+  font-size: 0.9em;
+  background-color: #4CAF50;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.vehicle-actions .edit-btn {
+  background-color: #1445cc; /* Green background for Vehicles button */
+}
+.vehicle-actions .remove-btn {
+  background-color: #d47114; /* Blue background for Drivers button */
+}
+.vehicle-actions .detach-btn {
+  background-color: #e62828; /* Blue background for Drivers button */
+}
+
+.dark-mode .no-vehicles-message {
+  padding-top: 100px;
+  text-align: center;
+  color: #ecf0f1;
+}
+
+.dark-mode .VehiclesList{
+  background-color: #0c1033; /* Dark background for dark mode */
+  color: #ecf0f1; /* Light text color for dark mode */
+}
+
+.dark-mode .Vehicle {
+  background-color: #2c2c2c; /* Darker background for each vehicle */
+  color: #ecf0f1; /* Light text color for each vehicle */
+}
+
+.dark-mode .Vehicle h1 {
+  font-size: 1.5em;
+  color: #616161;
+  margin: 0 0 10px 0;
+}
+
+.dark-mode .Vehicle h2 {
+  font-size: 0.85em;
+  color: #38a5d8;
+  margin-top: 25px;
+  margin-bottom: 0px;
+}
+
+.dark-mode .Vehicle h3 {
+  font-size: 0.9em;
+  color: #8d8d8d;
+  margin: 5px 0;
+}
+
+.dark-mode .Vehicle h4 {
+  font-size: 0.8em;
+  color: #8d8d8d;
+  margin: 3px 0;
+}
