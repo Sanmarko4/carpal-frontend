@@ -14,6 +14,15 @@ body {
   padding-top: 190px; /* Adjust this value based on the actual height of your TopBarMenu */
 }
 
+.dark-mode .TopBarMenu {
+  background-color: #333; /* Dark background for dark mode */
+  color: #fff; /* Light text for dark mode */
+}
+
+/* =================*/
+/* =====TOP ROW=====*/
+/* =================*/
+
 /* Style for the top row */
 .TopBarMenu .top-row {
   background-color: #0a85be; /* Darker background for the top row */
@@ -32,9 +41,10 @@ body {
   margin-top: 10px; /* Space out the buttons */
   margin-left: 10px; /* Space out the buttons */
   text-decoration: none; /* Remove underline from links */
-  border-radius: 5px; /* Rounded corners for buttons */
+  border-radius: 10px; /* Rounded corners for buttons */
   width: 180px;
-  transition: font-size 0.3s ease, font-weight 0.3s ease; /* Smooth transition for font-size and weight */
+  border-width: 4px;
+  transition: font-size 0.5s ease, font-weight 0.5s ease; /* Smooth transition for font-size and weight */
 }
 
 .TopBarMenu .top-row-links .vehicles-btn {
@@ -45,51 +55,11 @@ body {
 }
 
 .TopBarMenu .top-row-links button:hover {
-  font-size: 1.1em; /* Increase font size */
+  font-size: 1.05em; /* Increase font size */
   font-weight: bold; /* Make font bold */
   transform: scale(1.1); /* Adjust the scale factor to your preference */
   background-color: #000000; /* Slightly lighter background on hover */
   color: white; /* Text color */
-}
-
-.TopBarMenu .bottom-row {
-  color: white; /* Text color */
-  background-color: #1535c4; /* Button background color */
-  padding: 10px;
-  text-decoration: none; /* Remove underline from links */
-  border-radius: 10px; /* Rounded corners */
-  transition: all 0.3s ease; /* Smooth transition for all changes */
-  margin: 8px; 
-}
-
-.TopBarMenu .bottom-row a:hover {
-  font-size: 1.3em; /* Increase font size */
-  font-weight: bold; /* Make font bold */
-  background-color: #555; /* Slightly lighter background on hover */
-}
-
-.TopBarMenu nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 10px;
-}
-
-.TopBarMenu nav ul li {
-  padding: 10px;
-  cursor: pointer;
-}
-
-.TopBarMenu nav ul li:hover {
-  font-size: 1.3em; /* Increase font size */
-  background-color: #091d8f;
-  border-radius: 5px;
-}
-
-/* Active link style */
-.TopBarMenu nav ul li.active {
-  background-color: #1025a0;
 }
 
 .TopBarMenu .top-row img {
@@ -106,10 +76,6 @@ body {
   }
 }
 
-.dark-mode .TopBarMenu {
-  background-color: #333; /* Dark background for dark mode */
-  color: #fff; /* Light text for dark mode */
-}
 .dark-mode .TopBarMenu .top-row {
   background-color: #1f1f1f; /* Darker background for the top row in dark mode */
   margin: 8px;
@@ -130,6 +96,54 @@ body {
   background-color: #5c5c5c; /* Lighter background on hover in dark mode */
 }
 
+/* =================*/
+/* ====BOTTOM ROW===*/
+/* =================*/
+
+.TopBarMenu .bottom-row {
+  color: white; /* Text color */
+  background-color: #1535c4; /* Button background color */
+  padding: 5px;
+  text-decoration: none; /* Remove underline from links */
+  border-radius: 10px; /* Rounded corners */
+  transition: all 0.5s ease; /* Smooth transition for all changes */
+  margin: 8px; 
+}
+
+.TopBarMenu nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.TopBarMenu nav ul li {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.TopBarMenu nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.TopBarMenu nav ul li:hover {
+  font-size: 1.3em;
+  background-color: #000000;
+  border-radius: 5px;
+}
+
+.TopBarMenu nav ul li a:hover {
+  font-size: 1.3em;
+  background-color: #000000;
+  border-radius: 5px;
+}
+
 .dark-mode .TopBarMenu .bottom-row {
   background-color: #000000; /* Dark background color for the bottom row in dark mode */
   margin: 8px;
@@ -140,5 +154,9 @@ body {
 }
 
 .dark-mode .TopBarMenu nav ul li:hover {
+  background-color: #353535; /* Adjusted hover background color for list items in dark mode */
+}
+
+.dark-mode .TopBarMenu nav ul li a:hover {
   background-color: #353535; /* Adjusted hover background color for list items in dark mode */
 }

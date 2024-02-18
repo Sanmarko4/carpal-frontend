@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './styles/NewVehicleForm.css';
-import config from '../config';
-import axios from 'axios';
 import { useTranslation } from 'react-i18next';
+import UserService from '../services/user.service';
 
 function NewVehicleForm({ onVehicleAdded }) {
   const [vehicleMakes, setVehicleMakes] = useState([]);
@@ -23,39 +22,51 @@ function NewVehicleForm({ onVehicleAdded }) {
     driver: ''
   });
 
+  const handleChange = (e) => {
+    setVehicleData({ ...vehicleData, [e.target.name]: e.target.value });
+  };
+
+//======================================
+//===== AVAILABLE DRIVERS & MAKES =====
+//======================================
+
   useEffect(() => {
     const currentYear = new Date().getFullYear();
     const years = Array.from({ length: currentYear - 1899 }, (v, k) => currentYear - k);
     setAvailableYears(years);
     
-    axios.get(`${config.API_ROOT_PATH}/availabledrivers`)
+    UserService.getAvailableDrivers()
     .then(response => {
       setAvailableDrivers(response.data);
     })
     .catch(error => console.error("Error fetching available drivers:", error));
 
-    axios.get(`${config.API_ROOT_PATH}/vehiclemakes`)
+    UserService.getVehiclemakes()
         .then(response => setVehicleMakes(response.data))
         .catch(error => console.error('Error fetching vehicle makes:', error));
 }, []);
 
-  const handleChange = (e) => {
-    setVehicleData({ ...vehicleData, [e.target.name]: e.target.value });
-  };
+const handleDriverChange = (e) => {
+  setVehicleData({ ...vehicleData, driver: { id: e.target.value } });
+};
+
+//=============================================
+//=== AVAILABLE MODELS AFTER MAKE CHANGE =====
+//=============================================
 
   const handleMakeChange = (e) => {
     const make = e.target.value;
     setVehicleData({ ...vehicleData, make: make, model: '' }); // Clear model when make changes
-    axios.get(`${config.API_ROOT_PATH}/vehiclemodels/${make}`)
+    UserService.getVehicleModels(make)
       .then(response => {
         setAvailableModels(response.data);
       })
       .catch(error => console.error("Error fetching vehicle models:", error));
   };
 
-  const handleDriverChange = (e) => {
-    setVehicleData({ ...vehicleData, driver: { id: e.target.value } });
-  };
+//=============================
+//==== CREATING VEHICLE ======
+//=============================
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -71,7 +82,7 @@ function NewVehicleForm({ onVehicleAdded }) {
       delete requestData.driver;
     }
 
-    axios.post(`${config.API_ROOT_PATH}/addvehicle`, requestData)
+    UserService.addVehicle(requestData)
       .then(() => {
         alert(`${t('vehicleCreated')} ${vehicleData.plateNumber}`)
         onVehicleAdded();

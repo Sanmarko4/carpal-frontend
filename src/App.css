@@ -1,0 +1,83 @@
+.App {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #dffeff; 
+}
+
+body {
+  background-color: #dffeff;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 400px; 
+  width: 400px;
+  color: rgb(0, 0, 0);
+  background-color: #1445cc;
+  border-radius: 20px;
+}
+
+.navbar {
+  background-color: #2bb0ee;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 15px;
+  width: 100px;
+  height: 260px;
+}
+
+.navbar img {
+  height: auto;
+  width: 100%;     
+  max-width: 100px;
+  border-radius: 20px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none; 
+  background-color: #000000;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.profile-img-card {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 10%;
+}
+
+.dark-mode {
+  background-color: #1b1b1b; 
+  color: #000000;
+}
+
+.card {
+  background-color: #2bb0ee;
+  padding: 10px 15px 10px;
+  margin: 0 auto 15px;
+  margin-top: 10px;
+  width: 180px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import './styles/EditDriver.css';
-import config from '../config';
-import axios from 'axios';
 import { useTranslation } from 'react-i18next';
+import UserService from '../services/user.service';
 
 function EditDriver({ driver, onUpdate }) {
   const { t } = useTranslation();
@@ -21,7 +20,7 @@ function EditDriver({ driver, onUpdate }) {
       return;
     }
 
-    axios.put(`${config.API_ROOT_PATH}/updatedriver`, editedDriver)
+    UserService.updateDriver (editedDriver)
       .then(() => {
         alert(`${t('driverUpdated')} ${editedDriver.firstName} ${editedDriver.secondName}`)
         onUpdate(editedDriver);

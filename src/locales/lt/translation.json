@@ -8,7 +8,7 @@
     "driver": "Vairuotojas",
     "firstName": "Vardas",
     "secondName": "Pavardė",
-    "driverLicenseNumber": "Vairuotojo pažymėjimo numeris",
+    "driverLicenseNumber": "Vairuotojo pažymėjimo nr.",
     "licenseEexpiryDate": "Pažymėjimo galiojimo data",
     "addDriver": "Pridėti vairuotoją",
     "selectDriver": "Pasirinkite vairuotoją",
@@ -50,5 +50,18 @@
     "vehicleUpdated": "Atnaujinote automobilį su valstybiniais numeriais: ",
     "driverUpdated": "Atnaujinote vairuotoją: ",
     "noDriver": "Vairuotojo nėra",
-    "no connection": "⚠️ Ryšys su duombaze prarastas! ⚠️"
+    "no connection": "⚠️ Ryšys su duombaze prarastas! ⚠️",
+    "ByName": "Vairuotojo vardą",
+    "ByLicenseExpiryDate": "Pažymėjimą",
+    "byInsurance": "Draudimą",
+    "byInspection": "TA pabaigą",
+    "byService": "Aptarnavimą",
+    "Sort by": "Rykiuoti pagal",
+    "help": "Pagalba",
+    "roadside assistance": "Pagalba kelyje",
+    "call": "📞 Skambinti",
+    "accident declaration": "Eismo įvykio deklaracija",
+    "sale/purchase agreement": "Pirkimo/pardavimo sutartis",
+    "open file": "📂 Atidaryti",
+    "logout": "Atsijungti"
   }

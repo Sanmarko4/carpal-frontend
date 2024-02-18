@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import './styles/NewDriverForm.css';
-import config from '../config';
-import axios from 'axios';
 import { useTranslation } from 'react-i18next';
+import UserService from '../services/user.service';
 
 function NewDriverForm({ onDriverAdded }) {
   const { t } = useTranslation();
@@ -26,7 +25,7 @@ function NewDriverForm({ onDriverAdded }) {
       return;
     }
 
-    axios.post(`${config.API_ROOT_PATH}/adddriver`, driverData)
+    UserService.addDriver (driverData)
       .then(() => {
         alert(`${t('driverCreated')} ${driverData.firstName} ${driverData.secondName}`)
         onDriverAdded();

@@ -170,6 +170,10 @@
   background-color: #e62828; /* Blue background for Drivers button */
 }
 
+/* =================*/
+/* DARK MODE SETTINGS*/
+/* =================*/
+
 .dark-mode .no-vehicles-message {
   padding-top: 100px;
   text-align: center;
@@ -209,4 +213,53 @@
   font-size: 0.8em;
   color: #8d8d8d;
   margin: 3px 0;
+}
+
+/* =================*/
+/* =SORTING BUTTONS=*/
+/* =================*/
+
+.text1 {
+  color: #041b59;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+button {
+  background-color: #1445cc;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: 150px;
+  margin-right: 10px;
+  margin-top: 10px;
+  border-width: 4px;
+  transition: font-size 0.5s ease, font-weight 0.5s ease;
+}
+
+.sort-btn2{
+  background-color: #d47114;
+}
+
+button:hover {
+  font-size: 0.8em; /* Increase font size */
+  font-weight: bold; /* Make font bold */
+  transform: scale(1.1); /* Adjust the scale factor to your preference */
+  background-color: #000000; /* Slightly lighter background on hover */
+  color: white; /* Text color */
+}
+
+.dark-mode .text1 {
+  color: #ffffff;
+}
+
+.dark-mode button {
+  background-color: #092d8f;
+}
+.dark-mode .sort-btn2 {
+  background-color: #ad5b0e;
+}
+
+.dark-mode button:hover {
+  background-color: #5c5c5c; /* Lighter background on hover in dark mode */
 }

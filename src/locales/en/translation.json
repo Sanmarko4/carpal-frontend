@@ -8,7 +8,7 @@
     "driver": "Driver",
     "firstName": "First name",
     "secondName": "Second name",
-    "driverLicenseNumber": "Driver license number",
+    "driverLicenseNumber": "Driver license no.",
     "licenseEexpiryDate": "License expiry date",
     "addDriver": "Add driver",
     "selectDriver": "Select driver",
@@ -50,5 +50,18 @@
     "vehicleUpdated": "You have updated vehicle with plate number: ",
     "driverUpdated": "You have updated driver:  ",
     "noDriver": "No assigned driver",
-    "no connection": "⚠️ Connection with database has been lost! ⚠️"
+    "no connection": "⚠️ Connection with database has been lost! ⚠️",
+    "ByName": "Drivers name",
+    "ByLicenseExpiryDate": "License",
+    "byInsurance": "Insurance",
+    "byInspection": "Inspection",
+    "byService": "Service",
+    "Sort by": "Sort by",
+    "help": "Help",
+    "roadside assistance": "Roadside assistance",
+    "call": "📞 Call",
+    "accident declaration": "Accident declaration",
+    "sale/purchase agreement": "Sale/purchase agreement",
+    "open file": "📂 Open file",
+    "logout": "Logout"
   }

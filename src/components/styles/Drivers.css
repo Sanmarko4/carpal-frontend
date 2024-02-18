@@ -1,16 +1,11 @@
 .DriversList {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Creates 2 columns when width allows, and makes the items responsive */
-  gap: 40px; /* This adds space between the grid items */
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 40px;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 80px;
   padding-right: 80px;
-}
-
-.no-drivers-message {
-  padding-top: 100px;
-  text-align: center;
 }
 
 .Driver {
@@ -78,6 +73,33 @@
   transform: scale(1.1); /* Adjust the scale factor to your preference */
 }
 
+.dark-mode .DriversList{
+  background-color: #0c1033; /* Dark background for dark mode */
+  color: #ecf0f1; /* Light text color for dark mode */
+}
+
+.dark-mode .Driver {
+  background-color: #2c2c2c; /* Darker background for each vehicle */
+  color: #ecf0f1; /* Light text color for each vehicle */
+}
+
+.dark-mode .Driver h1 {
+  font-size: 1.5em;
+  color: #616161;
+  margin: 0 0 10px 0;
+}
+
+
+.dark-mode .Driver h3 {
+  font-size: 0.9em;
+  color: #8d8d8d;
+  margin: 5px 0;
+}
+
+/* =================*/
+/* =DRIVERS BUTTONS=*/
+/* =================*/
+
 .driver-actions button:hover {
   font-size: 1.1em; /* Increase font size */
   font-weight: bold; /* Make font bold */
@@ -92,6 +114,10 @@
 .driver-actions .remove-btn {
   background-color: #d47114; /* Blue background for Drivers button */
 }
+
+/* =================*/
+/* ==DRIVERS DATES==*/
+/* =================*/
 
 .driver-details .dates {
   display: inline-block;
@@ -128,31 +154,65 @@
   padding: 2px;
 }
 
+/* =================*/
+/* ==NO DRIVER MSG==*/
+/* =================*/
+
+.no-drivers-message {
+  padding-top: 100px;
+  text-align: center;
+}
+
 .dark-mode .no-drivers-message {
   padding-top: 100px;
   text-align: center;
   color: #ecf0f1;
 }
 
-.dark-mode .DriversList{
-  background-color: #0c1033; /* Dark background for dark mode */
-  color: #ecf0f1; /* Light text color for dark mode */
+/* =================*/
+/* =SORTING BUTTONS=*/
+/* =================*/
+
+.text1 {
+  color: #041b59;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-.dark-mode .Driver {
-  background-color: #2c2c2c; /* Darker background for each vehicle */
-  color: #ecf0f1; /* Light text color for each vehicle */
+button {
+  background-color: #1445cc;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: 150px;
+  margin-right: 10px;
+  border-width: 4px;
+  transition: font-size 0.5s ease, font-weight 0.5s ease;
 }
 
-.dark-mode .Driver h1 {
-  font-size: 1.5em;
-  color: #616161;
-  margin: 0 0 10px 0;
+.sort-btn2{
+  background-color: #d47114;
 }
 
+button:hover {
+  font-size: 0.8em; /* Increase font size */
+  font-weight: bold; /* Make font bold */
+  transform: scale(1.1); /* Adjust the scale factor to your preference */
+  background-color: #000000; /* Slightly lighter background on hover */
+  color: white; /* Text color */
+}
 
-.dark-mode .Driver h3 {
-  font-size: 0.9em;
-  color: #8d8d8d;
-  margin: 5px 0;
+.dark-mode .text1 {
+  color: #ffffff;
+}
+
+.dark-mode button {
+  background-color: #092d8f;
+}
+.dark-mode .sort-btn2 {
+  background-color: #ad5b0e;
+}
+
+.dark-mode button:hover {
+  background-color: #5c5c5c; /* Lighter background on hover in dark mode */
 }
